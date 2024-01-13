@@ -1,0 +1,25 @@
+<form  [formGroup]="form" #ngForm="ngForm" role="form" (submit)="submit()">
+    <div class="card-body p-4">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="inputState" class="form-label text-dark">Nombre de tarea</label>
+                <input type="text" class="form-control" placeholder="Nombre de tarea" formControlName="nombre">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="inputState" class="form-label text-dark">informacion de tarea</label>
+                <input type="text" class="form-control" placeholder="informacion de tarea" formControlName="info">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="inputState" class="form-label text-dark">Fecha inicial</label>
+                <input type="date" class="form-control" placeholder="Fecha inicial" formControlName="f_inicial">
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <label for="inputState" class="form-label text-dark">Fecha de entrega</label>
+                <input type="date" class="form-control" placeholder="Fecha de entrega" formControlName="f_final">
+            </div>
+        </div>
+        <div class="d-grid gap-2 mt-5">
+            <button type="submit" class="btn btn-secondary">Guardar</button>
+        </div>
+    </div>
+</form>

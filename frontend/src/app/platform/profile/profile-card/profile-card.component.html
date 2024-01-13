@@ -1,0 +1,65 @@
+<div class="d-flex justify-content-end mr-4 col-12">
+  <div class="btn-group">
+    <button class="btn btn-secondary btn-sm ml-4" (click)="openModal($event)">Agregar nueva tarea</button>
+  </div>
+</div>
+
+<div class="card mt-3" *ngFor="let item of tarea; let iControl= index">
+  <div class="card-header">
+    <div class="d-flex justify-content-between">
+      <strong class="aling-self-center">Informacion</strong>
+    </div>
+  </div>
+  <div class="card-body">
+    <table class="table table-responsive">
+      <thead>
+        <tr>
+          <th>Nombre de Tarea</th>
+          <th>Informacion de Tarea</th>
+          <th>Fecha Inicial</th>
+          <th>Fecha de Entrega</th>
+          <th></th>
+        <tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{item.nombre}}</td>
+          <td>{{item.info}}</td>
+          <td>{{item.f_inicial}}</td>
+          <td>{{item.f_final}}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="borrar(item.tareas_id, iControl)">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!--hace que funcione el modal agregar usuarios-->
+<ng-container *ngIf="modalDisplay$ | async as modalDisplay;">
+  <div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display':modalDisplay}">
+    <div class="modal-dialog modal-lg modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="card">
+            <div class="card-header">
+              <div class="d-flex justify-content-between">
+                <strong class="aling-self-center">Información</strong>
+                <div class="text-end">
+                  <svg (click)="closeModal()" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-file-excel-fill" style="color: red;" viewBox="0 0 16 16">
+                    <path
+                      d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM5.884 4.68 8 7.219l2.116-2.54a.5.5 0 1 1 .768.641L8.651 8l2.233 2.68a.5.5 0 0 1-.768.64L8 8.781l-2.116 2.54a.5.5 0 0 1-.768-.641L7.349 8 5.116 5.32a.5.5 0 1 1 .768-.64z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <app-profile-modal *ngIf="selected$ | async as selected;" [modal]="selected" (closeModal)="closeModal()" >
+            </app-profile-modal>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>

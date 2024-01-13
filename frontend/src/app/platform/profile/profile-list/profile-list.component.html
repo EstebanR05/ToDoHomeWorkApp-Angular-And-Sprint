@@ -1,0 +1,59 @@
+<div class="d-flex bg-principal">
+
+  <!--aside-->
+  <div class="border-right p-2 desaparece sidebar" id="sidebar">
+    <div class="img-big">
+      <img class="rounded-circle img-1" [src]="imagen">
+      <div class="col-lg-4 col-sm-4">
+        <div class="input-group d-flex justify-content-center">
+            <div class="input-group-prepend">
+                <button  (click)="$event.preventDefault();image.click()" class="btn btn-secondary btn-sm d-flex justify-content-center "
+                    type="button">Subir</button>
+            </div>
+            <input #image style="display: none;" (change)="upload($event)" type="file"
+                placeholder="No hay archivo" name="imagen">
+        </div>
+      </div>
+    </div>
+    <h3 class="text-light p-2 text-center mt-2">
+      {{ datos.nombre + " " + datos.apellido}}
+    </h3>
+
+    <hr class="text-white" />
+
+    <br>
+    <div>
+    <div class="mt-2 text-center text-white">Nombre: {{datos.nombre }} </div>
+    <div class="mt-2 text-center text-white">Edad: {{ datos.edad}} </div>
+    <div class="mt-2 text-center text-white">Colegio: {{ datos.colegio }} </div>
+    <div class="mt-2 text-center text-white">Telefono: {{ datos.telefono }} </div>
+    <div class="mt-2 text-center text-white">Correo: {{ datos.correo }} </div>
+    </div>
+
+    <div class="d-flex justify-content-center pt-4">
+      <button (click)="leave()" class="btn btn-secondary btn-sm"
+          type="button">Cerrar sesión</button>
+  </div>
+
+  </div>
+
+  <!--section-->
+  <div class="container p-0" id="colorPrincipl">
+    <div class="p-2" id="colorHeader">
+      <div class="mt-2 text-end">
+        <img [src]="imagen" class="rounded-circle" width="40px" height="40px">
+      </div>
+    </div>
+    <div class="p-5" id="colorPrincipl">
+      <button class="btn btn-light ms-auto button" (click)="ocultar()">
+        Menu
+        <i class="fa fa-bars ms-1"></i>
+      </button>
+      <app-profile-card></app-profile-card>
+    </div>
+    <div class="p-4" id="colorPrincipl">
+      <div class="h6 text-white">Creado para el Colegio Manuel Maria Mallarino Copyright &copy; 2022</div>
+    </div>
+  </div>
+
+</div>

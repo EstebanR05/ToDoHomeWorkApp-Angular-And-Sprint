@@ -1,0 +1,54 @@
+#sidebar {
+    height: auto;
+    min-width: 45vh;
+    min-height: 800px;
+    background-color: #051229;
+}
+
+#colorHeader{
+    background-color: #051430;
+}
+
+li {
+    cursor: pointer;
+}
+
+.rounded-circle {
+    border: 1px solid white;
+}
+
+.img-1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+}
+
+.img-big {
+    width: 200px;
+    padding-left: 20px;
+}
+
+
+.input-group {
+    padding-top: 7px;
+    width: 200px;
+} 
+
+@media (max-width: 769px) {
+    .button {
+        display: inline;
+    }
+    .desaperece {
+        display: none;
+    }
+
+    .sidebar {
+        position: absolute;
+        display: none;
+    }
+}
+
+.button {
+    display: none;
+}
+

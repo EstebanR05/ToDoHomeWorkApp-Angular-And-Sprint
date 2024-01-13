@@ -1,0 +1,51 @@
+.footer {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  
+  .bg-principal {
+    background-color: #1D1D42 !important;
+  }
+  
+  .color-texto {
+    color: #FFFFFF !important;
+  }
+  
+  .bg-iconos {
+   color: #6FCF97;
+  }
+  .bg-iconos-2 {
+    color: #FFFFFF;
+  }
+  
+  .botones {
+    background-color: #4E2ECF !important;
+  }
+  
+  .icono-especial {
+    fill: #4E2ECF;
+  }
+  
+  .bhover:hover {
+    color: #4E2ECF !important; 
+  }
+  
+  .green {
+    background-color: #6FCF97 !important;
+  }
+  
+  .paginabg {
+      background-color: #091D42 !important;
+  }
+
+
+  @media (max-width: 990px) {
+    .responsive {
+      height: 100vh;
+    }
+  }
+
+  body {
+    background-color: #27275f !important;
+  }

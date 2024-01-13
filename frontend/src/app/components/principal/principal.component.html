@@ -1,0 +1,149 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-principal" id="mainNav">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#page-top">
+      <i>
+        <div class="h3">Ontrack Jammy</div>
+      </i>
+    </a>
+    <div class="input-group mb-3">
+        <button class="btn btn-light ms-auto button" (click)="ocultar()">
+            Menu
+            <i class="fa fa-bars ms-1"></i>
+          </button>
+          <div class="main_list" id="mainListDiv">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0 pl-4 desaparece ">
+              <li class="nav-item"><a class="nav-link tamaño desaparece" href="#services">objetivo</a></li>
+              <li class="nav-item"><a class="nav-link tamaño desaparece " href="#about">Grupo</a></li>
+            </ul>
+          </div>
+    </div>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="container">
+    <div class="masthead-subheading">Bienvenido a un estilo de vida!</div>
+    <a class="btn btn-primary btn-sm text-uppercase" routerLink="/auth/login">Iniciar sesión</a>
+  </div>
+</header>
+
+<section class="page-section bg-principal" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase color-texto">objetivo</h2>
+      <h3 class="section-subheading color-texto">
+        Hemos Diseñado este sistema con el objetivo de:
+      </h3>
+    </div>
+    <div class="row color-texto">
+      <div class="col-md-4 text-center">
+        <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/img about app/img2.jpg">
+        <h4 class="my-3">Tareas online</h4>
+        <p class="color-texto">Tienes la posibilidad de abrir la aplicacion y subir tus tareas donde quiera que estes y
+          desde cualquier dispositivo.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/img about app/img1.jpg">
+        <h4 class="my-3">Creacion dinamica</h4>
+        <p class="color-texto">Anotacion de tareas de una manera facil y sencilla a traves de pocos botones.</p>
+      </div>
+      <div class="col-md-4 text-center">
+        <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/img about app/img3.jpg">
+        <h4 class="my-3">Visualizacion dinamica</h4>
+        <p class="color-texto">Ver tus tareas de una manera facil y bien estructurada para diferenciarlas y poderlas
+          realizar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- integrantes del grupo -->
+
+<section class="page-section bg-principal" id="about">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading color-texto ">Equipo de trabajo</h2>
+      <h3 class="section-subheading color-texto ">diseñado por las siguientes personas</h3>
+    </div>
+    <ul class="timeline">
+      <li>
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/pinto2.png" alt="..." />
+        </div>
+        <div class="timeline-panel color-texto">
+          <div class="timeline-heading">
+            <h4>Juan Miguel Pinto Gutierrez</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="color-texto">tecnico en sistemas, edad: 18 años, creador de logica en el frontend con el framework
+              Angular</p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/marcela2.png" alt="..." />
+        </div>
+        <div class="timeline-panel color-texto">
+          <div class="timeline-heading">
+            <h4>Lesly Marcela Zambrano Rudas</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="color-texto">tecnica en sistemas, edad: 17 años, creadora de diseño y maquetado en el frontend</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/yorjanys2.png" alt="..." />
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading color-texto">
+            <h4>Yorjanys Paola Primera Ortega</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="color-texto">tecnica en sistemas, edad: 17 años, creadora de la comunicacion con la base de datos en php</p>
+          </div>
+        </div>
+      </li>
+      <li class="timeline-inverted">
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/angie2.png" alt="..." />
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading color-texto">
+            <h4>Angie Paola Valdes Mellizo</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="color-texto">tecnica en sistemas, edad: 18 años, creadora de la base de datos</p>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-image">
+          <img class="rounded-circle img-fluid" src="../../../assets/fotos grupo jammy/miguel2.png" alt="..." />
+        </div>
+        <div class="timeline-panel">
+          <div class="timeline-heading color-texto">
+            <h4>Miguel Dueñas Gallego</h4>
+          </div>
+          <div class="timeline-body">
+            <p class="color-texto">tecnico en sistemas, edad: 16 años, creador de diseño y maquetado en el frontend</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-4 bg-principal">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-12 col-md-12 col-sm-12 text-lg-start color-texto">
+         Creado para el Colegio Manuel Maria Mallarino Copyright &copy; 2022
+      </div>
+    </div>
+  </div>
+</footer>
+

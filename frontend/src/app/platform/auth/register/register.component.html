@@ -1,0 +1,88 @@
+<body class="pt-2">
+  <div class="container pb-4" >
+    <div class="card paginabg">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <img src="assets/logo.png" class="img-fluid pt-4" alt="Sample image">
+          </div>
+          <div class="col-12 col-md-6">
+            <form [formGroup]="formUsuarios" #ngForm="ngForm" role="formUsuarios" (submit)="submit()">
+              <legend class="text-white titulo">
+                <a href="http://www.jquery2dotnet.com">
+                  <i class="glyphicon glyphicon-globe"></i>
+                </a> Registarse
+              </legend>
+              <div class="row">
+                <div class="col-xs-6 col-md-6">
+                  <input class="form-control mt-2" name="firstname" formControlName="nombre" placeholder="Nombre"
+                    type="text" autofocus />
+                    <div *ngIf="getControl('nombre').invalid && ngForm.submitted" class="text-right">
+                      <label class="text-pink text-xs text-danger">nombre es requerido o invalido</label>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <input class="form-control mt-2" name="lastname" formControlName="apellido" placeholder="Apellido"
+                    type="text" />
+                    <div *ngIf="getControl('apellido').invalid && ngForm.submitted" class="text-right">
+                      <label class="text-pink text-xs text-danger">apellido es requerido o invalido</label>
+                    </div>
+                </div>
+              </div>
+              <input class="form-control mt-2" name="youremail" formControlName="correo" placeholder="Correo"
+                type="email" />
+                <div *ngIf="getControl('correo').invalid && ngForm.submitted" class="text-right">
+                  <label class="text-pink text-xs text-danger">correo es requerido o invalido</label>
+                </div>
+              <input class="form-control mt-2" name="password" formControlName="contrasena" placeholder="Contraseña"
+                type="password" />
+              <input class="form-control mt-2" name="edad" formControlName="edad" placeholder="Edad"
+                type="number" />
+              <div class="row">
+                <div class="col-xs-6 col-md-6">
+                  <select class="form-control mt-2" name="colegio" formControlName="colegio">
+                    <option value="" hidden selected>Colegio</option>
+                    <option value="I.E.M.M.M">
+                      I.E.M.M.M
+                    </option>
+                    <option value="Otro...">
+                      Otro...
+                    </option>
+                  </select>
+                </div>
+                <div class="col-xs-6 col-md-6">
+                  <input type="number" name="telefono" class="form-control mt-2" placeholder="Telefono"
+                    formControlName="telefono" />
+                </div>
+              </div>
+              <div class="text-center text-lg-start mt-4 pt-2">
+                <button type="submit" name="subir" class="btn btn-primary btn-lg"
+                  style="padding-left: 2.5rem; padding-right: 2.5rem;">Registrarse</button>
+                <p class="small fw-bold text-white mt-2 pt-1 mb-0">
+                  ¿Tienes cuenta?
+                  <a routerLink="/auth/login" class="link-danger">Iniciar sesión</a>
+                </p>
+                <br>
+              </div>
+            </form>
+          </div>
+
+        </div>
+
+
+        <!-- FOOTER -->
+
+        <div class="col-12">
+          <div
+            class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5">
+            <div class="text-white mb-3 mb-md-0">
+              Creado para el Colegio Manuel Maria Mallarino Copyright &copy; 2022
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
